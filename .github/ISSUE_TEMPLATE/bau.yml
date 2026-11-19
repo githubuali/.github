@@ -1,0 +1,17 @@
+name: BAU
+description: Operación, mantenimiento o un cambio chico que no es parte de una feature.
+type: Task
+labels: [bau]
+projects: ["githubuali/8"]
+body:
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: Por qué hace falta.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Qué cambia

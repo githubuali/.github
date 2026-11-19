@@ -1,0 +1,19 @@
+name: Tarea
+description: El cambio en este repo para una feature.
+type: Task
+projects: ["githubuali/8"]
+body:
+  - type: input
+    id: feature
+    attributes:
+      label: Feature
+      description: La feature de uali-product-docs (por ejemplo `uali-product-docs#117`). La tarea queda como su sub-issue.
+      placeholder: uali-product-docs#117
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Qué cambia en este repo
+    validations:
+      required: true

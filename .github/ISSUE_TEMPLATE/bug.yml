@@ -1,0 +1,43 @@
+name: Bug
+description: Un bug de producción o de un cliente, o un hallazgo de QA mientras se prueba una feature.
+type: Bug
+labels: [bug]
+projects: ["githubuali/8"]
+body:
+  - type: dropdown
+    id: severidad
+    attributes:
+      label: Severidad
+      options: [S1, S2, S3, S4]
+    validations:
+      required: true
+  - type: dropdown
+    id: origen
+    attributes:
+      label: Origen
+      description: Prod o Cliente = llegó a usuarios. QA = se encontró probando una feature.
+      options: [Prod, Cliente, QA]
+    validations:
+      required: true
+  - type: dropdown
+    id: entorno
+    attributes:
+      label: Entorno
+      options: [qa, staging, prod]
+  - type: input
+    id: test
+    attributes:
+      label: Test que falló
+      description: Solo hallazgos de QA. El test de qa-monorepo que falló (por ejemplo `qa-monorepo#900`).
+  - type: input
+    id: introducido
+    attributes:
+      label: Introducido en
+      description: Solo bugs de producción, si se sabe. La feature que lo introdujo (por ejemplo `uali-product-docs#117`).
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos
+      description: Cómo reproducirlo, qué se esperaba y qué pasó.
+    validations:
+      required: true

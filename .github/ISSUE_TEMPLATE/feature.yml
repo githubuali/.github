@@ -1,0 +1,20 @@
+name: Feature
+description: Un cambio de producto (release). Solo en uali-product-docs.
+type: Feature
+labels: [release-candidate]
+projects: ["githubuali/8"]
+body:
+  - type: markdown
+    attributes:
+      value: Las features viven en `uali-product-docs`. Las tareas de cada repo se crean después, como sub-issues de esta feature.
+  - type: textarea
+    id: what
+    attributes:
+      label: Qué cambia y para quién
+    validations:
+      required: true
+  - type: textarea
+    id: e2e
+    attributes:
+      label: Cómo se prueba de punta a punta
+      description: Los tests E2E se crean como sub-issues de esta feature (formulario "Test case").

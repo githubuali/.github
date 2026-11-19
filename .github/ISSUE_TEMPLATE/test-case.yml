@@ -1,0 +1,35 @@
+name: Test case
+description: Un test de QA. Crealo en qa-monorepo, debajo de una feature (E2E) o de una tarea (test del repo).
+type: Task
+labels: [test-case]
+projects: ["githubuali/8"]
+body:
+  - type: input
+    id: parent
+    attributes:
+      label: Parent
+      description: La feature (test E2E, por ejemplo `uali-product-docs#117`) o la tarea (test del repo, por ejemplo `core-ms#40`).
+    validations:
+      required: true
+  - type: dropdown
+    id: critico
+    attributes:
+      label: Crítico
+      options: ["No", "Sí"]
+  - type: dropdown
+    id: automatizado
+    attributes:
+      label: Automatizado
+      options: ["No", "Sí"]
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
